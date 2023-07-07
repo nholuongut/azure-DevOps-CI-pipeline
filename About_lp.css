@@ -1,0 +1,97 @@
+h2{
+  
+    text-align: left;
+    color: brown;
+    
+}
+h1{
+    text-align: LEFT;
+    color: blue;
+}
+h3{
+    text-align: left;
+    color: brown;
+    font-size: large;
+}
+
+body {
+    
+    background-color: rgb(238, 248, 223);
+}
+img{
+    height: 800px;
+    width: 70%;
+    float: bottom;
+    margin-top: 0ch;
+    
+    
+}
+table{
+    width: 70%;
+    padding: 5%cm;
+    text-align: center;
+    
+      
+}
+tr a{
+    font-size:  1.2em;
+	background-color: rgb(241, 192, 127);
+	color: black;
+	text-decoration:none; 
+    display: block;
+   
+}
+td a:hover {
+    background-color: brown;
+    color: white;
+    pointer-events: all;
+    }
+  
+div.body	{ 
+    width: 70%;
+    margin: auto;
+    margin-top: .5em ;
+    margin-bottom: .5em ;
+  }
+  p{
+      color: brown;
+      font-size: large;
+      width: 70%;
+  }
+  
+  table.info td{  
+    border: solid;
+    height: 50px; 
+    border-color: brown; 
+    
+}
+  img#img{
+      width: 100%;
+      
+  }
+  tr.heading{
+    color: brown;
+	background-color: rgb(240, 185, 131);
+    border-style: ridge;
+    border-color: brown;	
+  }
+  nav	{
+    background-color: rgb(240, 185, 131);
+    border-style: ridge;
+    border-color: brown;
+    width: 70%;	
+
+    }
+
+nav a{
+    color: black;
+    padding: 1px 50px ;
+    display: inline;
+    }
+
+nav a:hover	{
+    background-color: brown;
+    display: inline;
+    
+    }
+

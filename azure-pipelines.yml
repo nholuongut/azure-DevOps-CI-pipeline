@@ -1,0 +1,31 @@
+trigger:
+- master
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+  - stage: Build
+    displayName: Build Stage
+    jobs:
+     - job: Build
+       displayName: Build job
+       pool: 
+         vmImage: 'ubuntu-latest'
+       steps:
+         # Task-1: Build Docker Image and push to Azure Container Registry ACR
+         - task: Docker@2
+           inputs:
+             containerRegistry: 'manual-devops-acr-svc'
+             repository: 'app1'
+             command: 'buildAndPush'
+             Dockerfile: '**/Dockerfile'
+             tags: 
+               $(tag)
+        
+         # Task 2 publish build artifacts
+         - task: PublishBuildArtifacts@1
+           inputs:
+            PathtoPublish: '$(System.DefaultWorkingDirectory)/kube-manifests'
+            ArtifactName: 'kube-manifests'
+            publishLocation: 'Container'
